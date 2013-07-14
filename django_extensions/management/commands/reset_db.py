@@ -1,8 +1,10 @@
 """
 originally from http://www.djangosnippets.org/snippets/828/ by dnordberg
 """
-
-from six.moves import input
+try:
+    from six.moves import input
+except ImportError:
+    pass
 from django.conf import settings
 from django.core.management.base import CommandError, BaseCommand
 import django
